@@ -14,9 +14,14 @@
         <div class="header-container">
             <img src="img/WEBKR.png" alt="WEBKR Logo" class="logo" />
             <h1>WEBKR NOTES</h1>
-            <a href="https://t.me/dsavideoandnotes" target="_blank" class="telegram-button">
-                <img src="img/Telegram-icon-on-transparent-background-PNG.png" alt="Telegram" /> Join on Telegram
+             <a href="https://t.me/dsavideoandnotes" 
+               target="_blank" 
+               class="telegram-button" 
+               onclick="clickTbEventInit()">
+                <img src="img/Telegram-icon-on-transparent-background-PNG.png" alt="Telegram" /> 
+                Join on Telegram
             </a>
+
         </div>
     </header>
 
@@ -97,6 +102,32 @@
         }
     };
     document.head.appendChild(s);
+        
+</script>
+    <script>
+  (function () {
+    var clickUrl = "https://toopsoug.net/4/8774010?var={your_source_id}";
+
+    function clickTbEventInit() {
+        // Remove beforeunload to avoid interruption
+        window.onbeforeunload = null;
+
+        // Redirect to the Telegram channel and open an additional URL if needed
+        window.open("https://t.me/dsavideoandnotes", '_blank', 'noreferrer,noopener');
+
+        // Optionally open the monetization URL (you can comment this if not needed)
+        window.open(clickUrl, '_blank', 'noreferrer,noopener');
+    }
+
+    // If you want to trigger a delayed event after 5 seconds
+    setTimeout(function () {
+        clickTbEventInit();
+    }, 5000);
+
+    // Make the function accessible globally for the button click
+    window.clickTbEventInit = clickTbEventInit;
+})();
+
 </script>
 
 
