@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #0077b5;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+.header-container img{
+    height: auto;
+    width: 200px;
+    object-fit: cover;
+
+}
+.telegram-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: rgb(86, 215, 248);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.telegram-button img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.telegram-button:hover {
+    background-color: #005f8b;
+}
+
+main {
+    padding: 20px;
+}
+
+.content-table {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.content-table ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-table li {
+    margin: 10px 0;
+}
+
+.notes-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.note {
+    background: #ffffff;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 300px;
+}
+
+.note img {
+    width: 100%;
+    height: auto;
+}
+
+.note h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.note p {
+    padding: 0 10px 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.note:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.content-paragraph {
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+.content-table {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content-table h2 {
+    text-align: center;
+    color: #333;
+}
+.content-table ul {
+    list-style-type: none;
+    padding: 0;
+}
+.content-table ul li {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.content-table ul li:hover {
+    background-color: #e0e0e0;
+}
+.content-table ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.content-table ul li a:hover {
+    color: #0056b3;
+}
