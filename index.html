@@ -14,7 +14,7 @@
         <div class="header-container">
             <img src="img/WEBKR.png" alt="WEBKR Logo" class="logo" />
             <h1>WEBKR NOTES</h1>
-             <a href="https://t.me/dsavideoandnotes" 
+             <a 
                target="_blank" 
                class="telegram-button" 
                onclick="clickTbEventInit()">
@@ -111,9 +111,6 @@
     function clickTbEventInit() {
         // Remove beforeunload to avoid interruption
         window.onbeforeunload = null;
-
-        // Redirect to the Telegram channel and open an additional URL if needed
-        window.open("https://t.me/dsavideoandnotes", '_blank', 'noreferrer,noopener');
 
         // Optionally open the monetization URL (you can comment this if not needed)
         window.open(clickUrl, '_blank', 'noreferrer,noopener');
