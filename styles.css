@@ -8,29 +8,61 @@ body {
 header {
     background-color: #0077b5;
     color: white;
-    padding: 20px 10px;
     text-align: center;
 }
-
 .header-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.header-container h1 {
-    margin: 0;
-    font-size: 2rem;
+    justify-content: space-between; /* Pushes logo to the left and nav to the right */
 }
 .header-container img{
-    height: auto;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     object-fit: cover;
 
 }
+.logo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right-container{
+    display: flex;
+}
+.dark-mode-btn{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/* Base styling for the Telegram button */
+.menu-telegram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0088cc;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for the Telegram button */
+.menu-telegram:hover {
+    background-color: #0077b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for the Telegram icon inside the button */
+.telegram-icon {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
 .telegram-button {
     display: inline-block;
     padding: 15px 30px;
@@ -203,8 +235,102 @@ footer p {
     height: auto;  /* Allows the height to adjust based on width */
     border: none;  /* Removes border */
 }
+.telegram-container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 
-/* Optional: If you want to maintain a specific aspect ratio */
-.ad-container iframe {
-    aspect-ratio: 16 / 9;  /* Adjust the ratio to your ad's original aspect ratio */
+}
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+.menu-toggle{
+    display: none;
+}
+.menu li .telegram-container{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: white;
+    color: rgb(86, 215, 248);
+    font-size: 1.0rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.menu li .telegram-container img{
+    width: 50px;
+    height: 50px;
+
+}
+
+@media (max-width: 1200px) {
+    .menu {
+        display: none; /* Hide menu by default on small screens */
+        flex-direction: column; /* Make the menu vertical */
+        background-color: white;
+        color: #0088cc;
+        position: absolute;
+        top: 60px; /* Adjust according to header height */
+        right: 10px;
+        width: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .menu li {
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #0088cc;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-right: 5px;
+    }
+    .menu-toggle img{
+        height: 50px; 
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .menu.show {
+        display: flex; /* Show menu when toggled */
+    }
+
 }
